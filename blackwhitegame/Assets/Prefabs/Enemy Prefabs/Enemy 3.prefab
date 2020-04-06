@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Forkey Frank
+  unitJob: can't keep his papers together
   unitLevel: 1
   damage: 3
   maxHP: 20

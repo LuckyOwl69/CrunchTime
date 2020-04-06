@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Knifey Knick
+  unitJob: needs some help slicing a bunch of paper
   unitLevel: 1
   damage: 3
   maxHP: 20
