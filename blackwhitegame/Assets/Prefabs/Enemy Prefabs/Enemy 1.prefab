@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5184723094936373177}
   - component: {fileID: 3857906085221371520}
   m_Layer: 0
-  m_Name: Enemy 1 1
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Burger Boss
+  unitJob: wants to boss you around
   unitLevel: 1
   damage: 5
   maxHP: 30

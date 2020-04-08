@@ -10,11 +10,21 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
     public static int enemiesOnCurrentFloor;
-    public int enemyPrefabsSize = Random.Range(0, 50);
+    //public int enemyPrefabsSize = Random.Range(0, 50);
 
 
     public GameObject playerPrefab;
     //public GameObject enemyPrefab;
+
+    
+
+    public GameObject attackButton;
+    public GameObject magicButton;
+    public GameObject cancelButton;
+
+    public GameObject magic1Button;
+
+
 
     public List<GameObject> enemyPrefabs;
 
@@ -24,7 +34,10 @@ public class BattleSystem : MonoBehaviour
     Unit playerUnit;
     Unit enemyUnit;
 
+
+    public Text playerHealthText;
     public Text dialogueText;
+    public Text playerNameText;
 
     public BattleHUD playerHUD;
 
@@ -34,9 +47,20 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+        playerNameText.text = playerUnit.unitName;
+
+        //show player health in text form
+        playerHealthText.text = playerUnit.currentHP.ToString() + " / " + playerUnit.maxHP.ToString() + " HP";
+
+        attackButton.transform.gameObject.SetActive(true);
+        magicButton.transform.gameObject.SetActive(true);
+
+        //magic spells
+        magic1Button.transform.gameObject.SetActive(false);
+
     }
 
-   IEnumerator SetupBattle()
+    IEnumerator SetupBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
@@ -44,8 +68,8 @@ public class BattleSystem : MonoBehaviour
         GameObject enemyGo = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], enemyBattleStation);
         enemyUnit = enemyGo.GetComponent<Unit>();
 
-        dialogueText.text = enemyUnit.unitName + " wants to nag you about something!";
-
+        //flavour text as soon as battle begins
+        dialogueText.text = enemyUnit.unitName + " " + enemyUnit.unitJob + "!";
         playerHUD.SetHUD(playerUnit);
 
         yield return new WaitForSeconds(2f);
@@ -76,9 +100,19 @@ public class BattleSystem : MonoBehaviour
 
     }
 
+    public void PlayerMagic()
+    {
+        attackButton.transform.gameObject.SetActive(false);
+        magicButton.transform.gameObject.SetActive(false);
+
+        //magic spells
+        magic1Button.transform.gameObject.SetActive(true);
+
+    }
+
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = enemyUnit.unitName + " attacks!";
+        dialogueText.text = enemyUnit.unitName + " attacks! You take " + enemyUnit.damage + " damage!";
 
         yield return new WaitForSeconds(1f);
 
@@ -116,8 +150,8 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
-        //dialogueText.text = "Your turn: ";
-        dialogueText.text = enemyUnit.unitName + " Health = " + enemyUnit.currentHP;
+        dialogueText.text = "Your turn: ";
+        //dialogueText.text = enemyUnit.unitName + " Health = " + enemyUnit.currentHP;
 
     }
 
