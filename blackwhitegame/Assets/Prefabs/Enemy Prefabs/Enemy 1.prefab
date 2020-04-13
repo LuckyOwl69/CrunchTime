@@ -50,6 +50,7 @@ MonoBehaviour:
   damage: 5
   maxHP: 30
   currentHP: 30
+  weakness: Scisors
 --- !u!1 &8507880140909726241
 GameObject:
   m_ObjectHideFlags: 0

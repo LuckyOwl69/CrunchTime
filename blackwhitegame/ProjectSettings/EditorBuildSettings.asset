@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BossOffice.unity
+    path: Assets/Scenes/NotBossOffice.unity
     guid: c8565b261dcc3294eb8eec544992569d
   - enabled: 1
     path: Assets/Scenes/NormalOffice1.unity
@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle.unity
     guid: 42eb41981512ba74a9af917958605df4
   - enabled: 1
-    path: Assets/Scenes/Top down.unity
+    path: Assets/Scenes/Office1.unity
     guid: 2f0bc61e8144535419d5aa57f58f743c
   m_configObjects: {}

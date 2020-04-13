@@ -7,16 +7,16 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Vector3 overworldPos;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public BattleSystem BattleSystemObject;
 
-    // Update is called once per frame
+    public float PlayerHealth;
+
+    Unit playerUnit;
+
+
     void Update()
     {
-        
+        PlayerHealth = playerUnit.currentHP;
     }
 
     void Awake()

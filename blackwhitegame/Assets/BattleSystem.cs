@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
+
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
@@ -16,15 +17,27 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     //public GameObject enemyPrefab;
 
-    
+    public Object CurrentFloorScene;
 
-    public GameObject attackButton;
-    public GameObject magicButton;
-    public GameObject cancelButton;
+    public Button NAButton;
 
-    public GameObject magic1Button;
+    public Button AttackButton;
+    public Button Magic1Button;
+    public Button Magic4Button;
 
-
+    //first menu
+    public GameObject AttackButtonObject;
+    public GameObject MagicButtonObject;
+    public GameObject TalkButtonObject;
+    //second menu
+    public GameObject Magic1ButtonObject;
+    public GameObject Magic2ButtonObject;
+    public GameObject Magic3ButtonObject;
+    public GameObject BackButton1Object;
+    public GameObject NextButton1Object;
+    //third menu
+    public GameObject Magic4ButtonObject;
+    public GameObject BackButton2Object;
 
     public List<GameObject> enemyPrefabs;
 
@@ -43,23 +56,29 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
+    bool MagicUsed;
+
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
         playerNameText.text = playerUnit.unitName;
 
-        //show player health in text form
-        playerHealthText.text = playerUnit.currentHP.ToString() + " / " + playerUnit.maxHP.ToString() + " HP";
 
-        attackButton.transform.gameObject.SetActive(true);
-        magicButton.transform.gameObject.SetActive(true);
+        AttackButtonObject.transform.gameObject.SetActive(true);
+        MagicButtonObject.transform.gameObject.SetActive(true);
 
         //magic spells
-        magic1Button.transform.gameObject.SetActive(false);
+        Magic1ButtonObject.transform.gameObject.SetActive(false);
 
     }
 
+    private void Update()
+    {
+        //show player health in text form
+        playerHealthText.text = playerUnit.currentHP.ToString() + " / " + playerUnit.maxHP.ToString() + " HP";
+
+    }
     IEnumerator SetupBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -83,30 +102,78 @@ public class BattleSystem : MonoBehaviour
     {
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
-        dialogueText.text = "The attack is successful!";
+        dialogueText.text = "The attack is successful! "+ enemyUnit.unitName+ " takes " + playerUnit.damage + " damage!";
 
         yield return new WaitForSeconds(2f);
 
         if(isDead)
         {
             state = BattleState.WON;
+            dialogueText.text = "You won the battle!";
+            yield return new WaitForSeconds(2f);
+
             EndBattle();
         }
         else
         {
+
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
 
     }
+    
+    IEnumerator PlayerMagicAttack(string affinity) 
+    {
+        if(affinity == enemyUnit.weakness)
+        {
+            bool isDead = enemyUnit.TakeDamage(playerUnit.damage * 2);
+            dialogueText.text = "The attack is successful! " + enemyUnit.unitName + " takes " + playerUnit.damage * 2 + " damage!";
+
+            yield return new WaitForSeconds(2f);
+
+            if (isDead)
+            {
+                state = BattleState.WON;
+                dialogueText.text = "You won the battle!";
+                yield return new WaitForSeconds(2f);
+
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.ENEMYTURN;
+                StartCoroutine(EnemyTurn());
+            }
+        }
+        else
+        {
+            bool isDead = enemyUnit.TakeDamage(playerUnit.damage * 0);
+            dialogueText.text = "The attack is unsuccessful... " + enemyUnit.unitName + " takes no damage!";
+
+            yield return new WaitForSeconds(2f);
+
+            if (isDead)
+            {
+                state = BattleState.WON;
+                dialogueText.text = "You won the battle!";
+                yield return new WaitForSeconds(2f);
+
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.ENEMYTURN;
+                StartCoroutine(EnemyTurn());
+            }
+        }
+    }
 
     public void PlayerMagic()
     {
-        attackButton.transform.gameObject.SetActive(false);
-        magicButton.transform.gameObject.SetActive(false);
+        MagicUsed = false;
+        //BattleMenuChoice();
 
-        //magic spells
-        magic1Button.transform.gameObject.SetActive(true);
 
     }
 
@@ -138,8 +205,7 @@ public class BattleSystem : MonoBehaviour
     {
         if(state == BattleState.WON)
         {
-            dialogueText.text = "You won the battle!";
-            SceneManager.LoadScene("Top down");
+            SceneManager.LoadScene(CurrentFloorScene.name);
 
         }
         else if(state == BattleState.LOST)
@@ -152,14 +218,128 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = "Your turn: ";
         //dialogueText.text = enemyUnit.unitName + " Health = " + enemyUnit.currentHP;
-
+        AttackButton.Select();
     }
 
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
             return;
-
+        NAButton.Select();
         StartCoroutine(PlayerAttack());
+    }
+
+
+    public void OnMagic1Button()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        StartCoroutine(PlayerMagicAttack("Scisors"));
+    }
+    public void OnMagic2Button()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        StartCoroutine(PlayerMagicAttack("Stapler"));
+    }
+     public void OnMagic3Button()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        StartCoroutine(PlayerMagicAttack("PaperClip"));
+    }
+
+    public void DefaultBattleMenu ()
+    {
+        //main menu objects
+        AttackButtonObject.transform.gameObject.SetActive(true);
+        MagicButtonObject.transform.gameObject.SetActive(true);
+        TalkButtonObject.transform.gameObject.SetActive(true);
+
+        //magic spells
+        Magic1ButtonObject.transform.gameObject.SetActive(false);
+        Magic2ButtonObject.transform.gameObject.SetActive(false);
+        Magic3ButtonObject.transform.gameObject.SetActive(false);
+        Magic4ButtonObject.transform.gameObject.SetActive(false);
+
+        //next buttons 
+        NextButton1Object.transform.gameObject.SetActive(false);
+
+        //back buttons
+        BackButton1Object.transform.gameObject.SetActive(false);
+        BackButton2Object.transform.gameObject.SetActive(false);
+
+        AttackButton.Select();
+    }
+    public void AltDefaultBattleMenu ()
+    {
+        //main menu objects
+        AttackButtonObject.transform.gameObject.SetActive(true);
+        MagicButtonObject.transform.gameObject.SetActive(true);
+        TalkButtonObject.transform.gameObject.SetActive(true);
+
+
+        //magic spells
+        Magic1ButtonObject.transform.gameObject.SetActive(false);
+        Magic2ButtonObject.transform.gameObject.SetActive(false);
+        Magic3ButtonObject.transform.gameObject.SetActive(false);
+        Magic4ButtonObject.transform.gameObject.SetActive(false);
+
+        //next buttons 
+        NextButton1Object.transform.gameObject.SetActive(false);
+
+        //back buttons
+        BackButton1Object.transform.gameObject.SetActive(false);
+        BackButton2Object.transform.gameObject.SetActive(false);
+
+    }
+
+    public void MagicMenu1 ()
+    {
+        //main menu objects
+        AttackButtonObject.transform.gameObject.SetActive(false);
+        MagicButtonObject.transform.gameObject.SetActive(false);
+        TalkButtonObject.transform.gameObject.SetActive(false);
+
+
+        //magic spells
+        Magic1ButtonObject.transform.gameObject.SetActive(true);
+        Magic2ButtonObject.transform.gameObject.SetActive(true);
+        Magic3ButtonObject.transform.gameObject.SetActive(true);
+        Magic4ButtonObject.transform.gameObject.SetActive(false);
+
+        //next buttons 
+        NextButton1Object.transform.gameObject.SetActive(true);
+
+        //back buttons
+        BackButton1Object.transform.gameObject.SetActive(true);
+        BackButton2Object.transform.gameObject.SetActive(false);
+
+        Magic1Button.Select();
+    }
+    
+    public void MagicMenu2 ()
+    {
+        //main menu objects
+        AttackButtonObject.transform.gameObject.SetActive(false);
+        MagicButtonObject.transform.gameObject.SetActive(false);
+        TalkButtonObject.transform.gameObject.SetActive(false);
+
+
+
+        //magic spells
+        Magic1ButtonObject.transform.gameObject.SetActive(false);
+        Magic2ButtonObject.transform.gameObject.SetActive(false);
+        Magic3ButtonObject.transform.gameObject.SetActive(false);
+        Magic4ButtonObject.transform.gameObject.SetActive(true);
+
+        //next buttons 
+        NextButton1Object.transform.gameObject.SetActive(false);
+
+        //back buttons
+        BackButton1Object.transform.gameObject.SetActive(false);
+        BackButton2Object.transform.gameObject.SetActive(true);
+
+        Magic4Button.Select();
     }
 }
