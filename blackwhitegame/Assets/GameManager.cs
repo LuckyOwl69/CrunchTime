@@ -5,27 +5,30 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Vector3 overworldPos;
+    public static Vector3 overworldPos;
+
+    public float overworldPosX;
+    public float overworldPosY;
 
     //public BattleSystem BattleSystemObject;
 
     public float PlayerHealth;
 
-    Unit playerUnit;
-
 
     void Update()
     {
-        PlayerHealth = playerUnit.currentHP;
+
     }
 
     void Awake()
     {
         if (instance == null)
         {
+            overworldPos.x = overworldPosX;
+            overworldPos.y = overworldPosY;
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-
+            
         }
         else
         {

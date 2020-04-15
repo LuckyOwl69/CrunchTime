@@ -14,9 +14,10 @@ public class GenericDoorController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManagerObject.overworldPos.x = NextScenePositionX;
-            GameManagerObject.overworldPos.y = NextScenePositionY;
             SceneManager.LoadScene(NextScene.name);
+            GameManager.overworldPos.x = NextScenePositionX;
+            GameManager.overworldPos.y = NextScenePositionY;
+            
         }
     }
 }

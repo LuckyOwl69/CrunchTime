@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        transform.position = GameManager.instance.overworldPos;
+        transform.position = GameManager.overworldPos;
 
         playerPositionPrevious = transform.position;
 
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
         if (distanceTravelled >= battleTrigger)
         {
-            GameManager.instance.overworldPos = transform.position;
+            GameManager.overworldPos = transform.position;
             //SceneManager.LoadScene("Battle");
 
         }
