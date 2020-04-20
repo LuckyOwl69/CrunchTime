@@ -173,8 +173,6 @@ public class BattleSystem : MonoBehaviour
     {
         MagicUsed = false;
         //BattleMenuChoice();
-
-
     }
 
     IEnumerator EnemyTurn()
@@ -234,7 +232,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.PLAYERTURN)
             return;
-        StartCoroutine(PlayerMagicAttack("Scisors"));
+        StartCoroutine(PlayerMagicAttack("Scissors"));
     }
     public void OnMagic2Button()
     {

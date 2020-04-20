@@ -130,4 +130,4 @@ MonoBehaviour:
   damage: 3
   maxHP: 20
   currentHP: 20
-  weakness: Stapler
+  weakness: Scissors

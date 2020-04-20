@@ -44,13 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff4859d88f7c1418750b2040789bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Burger Boss
-  unitJob: wants to boss you around
+  unitName: Spoony Steve
+  unitJob: 'wants to bound a book '
   unitLevel: 1
   damage: 5
   maxHP: 30
   currentHP: 30
-  weakness: Scisors
+  weakness: Stapler
 --- !u!1 &8507880140909726241
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 777e89c4feceb504fbdc1e96fcf48166, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd291e533f401514c8311912a58a1380, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
