@@ -35,8 +35,7 @@ public class TopDownPlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-            EditorApplication.isPlaying = false;
+        
     }
 
     void PlayerMovement()

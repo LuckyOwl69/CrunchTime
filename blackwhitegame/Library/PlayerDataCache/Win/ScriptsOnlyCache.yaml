@@ -11,7 +11,6 @@ ScriptsOnlyBuild:
     - InteractionButtonController
     - PlayerController
     - TopDownDoorController
-    - TopDownPlayerMovement
     - Unit
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -173,8 +172,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11468}
-    - Class: 114
       Script: {instanceID: 11576}
     - Class: 115
       Script: {instanceID: 0}
@@ -225,8 +222,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10766}
     - Class: 114
       Script: {instanceID: 10918}
-    - Class: 114
-      Script: {instanceID: 11468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -823,4 +818,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/BossOffice.unity
   - Assets/Scenes/Office1.unity
   - Assets/Scenes/Battle.unity
-  playerPath: D:/Capstone/Builds/22 04/blackwhitegame.exe
+  playerPath: D:/Capstone/Builds/22 04 2/blackwhitegame.exe
