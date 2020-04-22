@@ -5467,7 +5467,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1845170546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88cc8dfac2683a243a4ea0215761b9fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a5a3699149acc141aa20f9428b28815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1845170548
@@ -5988,7 +5988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f55c22a69e3c604da5ab4e5cdf36f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overworldPos: {x: 18.15, y: 10.86, z: 0}
+  overworldPosX: 0
+  overworldPosY: 0
   PlayerHealth: 0
 --- !u!4 &2118813840
 Transform:

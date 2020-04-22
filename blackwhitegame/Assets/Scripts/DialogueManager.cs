@@ -16,10 +16,13 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject talkButton;
 
+    public bool isTalking;
+
 
     void Start()
     {
         sentences = new Queue<string>();
+        isTalking = false;
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -27,6 +30,7 @@ public class DialogueManager : MonoBehaviour
         talkButton.gameObject.SetActive(false);
         dialogueBoxAnimator.SetBool("IsOpen", true);
         npcFaceAnimator.SetBool("IsOpen", true);
+        isTalking = true;
 
         nameText.text = dialogue.name;
 
@@ -37,21 +41,28 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
+        
         DisplayNextSentence();
+
+
     }
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (isTalking)
         {
-            EndDialogue();
-            return;
-        }
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
 
-        string sentence = sentences.Dequeue();
-        //dialogueText.text = sentence;
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+            string sentence = sentences.Dequeue();
+            //dialogueText.text = sentence;
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
+        
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -69,5 +80,6 @@ public class DialogueManager : MonoBehaviour
         talkButton.gameObject.SetActive(true);
         dialogueBoxAnimator.SetBool("IsOpen", false);
         npcFaceAnimator.SetBool("IsOpen", false);
+        isTalking = false;
     }
 }

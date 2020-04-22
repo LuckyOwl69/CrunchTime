@@ -6,6 +6,12 @@ public class InteractionButtonController : MonoBehaviour
 {
     public GameObject interractionButton;
 
+    private void Start()
+    {
+        interractionButton.gameObject.SetActive(false);
+
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         interractionButton.gameObject.SetActive(true);

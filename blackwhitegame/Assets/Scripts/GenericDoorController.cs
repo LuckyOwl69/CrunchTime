@@ -9,8 +9,6 @@ public class GenericDoorController : MonoBehaviour
     public string NextScene;
     public GameManager GameManagerObject;
 
-    
-
     public float NextScenePositionX;
     public float NextScenePositionY;
     void OnTriggerEnter2D(Collider2D other)
