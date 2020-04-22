@@ -12,6 +12,8 @@ public class TopDownPlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+    public bool inRoomWithBattles;
+
     public float distanceTravelled;
 
     public Vector2 playerPositionPrevious;
@@ -50,13 +52,16 @@ public class TopDownPlayerMovement : MonoBehaviour
 
         distanceTravelled += dist;
 
-
-        if (distanceTravelled >= battleTrigger)
+        if(inRoomWithBattles == true)
         {
-            GameManager.overworldPos = transform.position;
-            SceneManager.LoadScene("Battle");
+            if (distanceTravelled >= battleTrigger)
+            {
+                GameManager.overworldPos = transform.position;
+                SceneManager.LoadScene("Battle");
 
+            }
         }
+        
 
         playerPositionPrevious = transform.position;
 

@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c3a15497f0fc44874ba40a1f04139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: {fileID: 102900000, guid: a6ab548858d2e2d4bbaf1f99cc504c40, type: 3}
+  NextScene: 
   GameManagerObject: {fileID: 0}
   NextScenePositionX: 18
   NextScenePositionY: 10
@@ -1258,7 +1258,6 @@ GameObject:
   - component: {fileID: 1375750932}
   - component: {fileID: 1375750931}
   - component: {fileID: 1375750930}
-  - component: {fileID: 1375750929}
   - component: {fileID: 1375750934}
   m_Layer: 0
   m_Name: door
@@ -1267,18 +1266,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1375750929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375750928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cc7a029e19547f4e863fdaed3737a50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1375750930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1401,7 +1388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c3a15497f0fc44874ba40a1f04139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: {fileID: 102900000, guid: e2d8ef145376c5a4899d86d35cbeb530, type: 3}
+  NextScene: BossOffice
   GameManagerObject: {fileID: 593999979}
   NextScenePositionX: 18
   NextScenePositionY: 10
@@ -2127,5 +2114,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3907385567785780226, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 91350630}
+    - target: {fileID: 3907385567785780226, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: inRoomWithBattles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436861119475284593, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 91350630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f710a47254957c49b78ae32c3c073d8, type: 3}
