@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c3a15497f0fc44874ba40a1f04139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: {fileID: 102900000, guid: 2f0bc61e8144535419d5aa57f58f743c, type: 3}
+  NextScene: Office1
   GameManagerObject: {fileID: 593999979}
   NextScenePositionX: 11
   NextScenePositionY: 2
