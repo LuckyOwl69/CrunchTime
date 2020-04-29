@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/BossOffice.unity
+- path: Assets/Scenes/BossOffice VS.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

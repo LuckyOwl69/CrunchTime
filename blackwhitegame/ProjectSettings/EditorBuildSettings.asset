@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BossOffice.unity
     guid: e2d8ef145376c5a4899d86d35cbeb530
   - enabled: 1
-    path: Assets/Scenes/Office1.unity
+    path: Assets/Scenes/BossOffice VS.unity
+    guid: dc2c7a4a98ddc8149b9c6fd981d62fd5
+  - enabled: 1
+    path: Assets/Scenes/Hallway VS.unity
     guid: 2f0bc61e8144535419d5aa57f58f743c
+  - enabled: 1
+    path: Assets/Scenes/Lunchroom VS.unity
+    guid: 8d2f83e5da062904ca478d3413664489
   - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 42eb41981512ba74a9af917958605df4

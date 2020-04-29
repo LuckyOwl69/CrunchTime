@@ -5,12 +5,11 @@ ScriptsOnlyBuild:
     - BattleSystem
     - DialogueManager
     - DialogueTrigger
+    - EndBattle
     - GameManager
     - GenericDoorController
-    - GoBackController
     - InteractionButtonController
-    - PlayerController
-    - TopDownDoorController
+    - ObjectLayeringController
     - TopDownPlayerMovement
     - Unit
     Unity.2D.Tilemap.Editor.dll:
@@ -28,8 +27,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -74,15 +75,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10532}
     - Class: 114
-      Script: {instanceID: 10702}
+      Script: {instanceID: 10704}
     - Class: 114
       Script: {instanceID: 10792}
     - Class: 114
-      Script: {instanceID: 10918}
+      Script: {instanceID: 10834}
     - Class: 114
-      Script: {instanceID: 10936}
+      Script: {instanceID: 10920}
     - Class: 114
-      Script: {instanceID: 11022}
+      Script: {instanceID: 10938}
     - Class: 114
       Script: {instanceID: 11134}
     - Class: 114
@@ -109,7 +110,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 331
       Script: {instanceID: 0}
-    Assets/Scenes/BossOffice.unity:
+    Assets/Scenes/BossOffice VS.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -159,17 +160,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10550}
     - Class: 114
-      Script: {instanceID: 10702}
+      Script: {instanceID: 10666}
     - Class: 114
-      Script: {instanceID: 10918}
+      Script: {instanceID: 10704}
     - Class: 114
-      Script: {instanceID: 10936}
+      Script: {instanceID: 10920}
     - Class: 114
-      Script: {instanceID: 10950}
+      Script: {instanceID: 10938}
+    - Class: 114
+      Script: {instanceID: 10952}
     - Class: 114
       Script: {instanceID: 11196}
-    - Class: 114
-      Script: {instanceID: 11300}
     - Class: 114
       Script: {instanceID: 11366}
     - Class: 114
@@ -192,7 +193,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Office1.unity:
+    Assets/Scenes/Hallway VS.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -222,11 +223,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10330}
     - Class: 114
-      Script: {instanceID: 10766}
-    - Class: 114
-      Script: {instanceID: 10918}
-    - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 10920}
     - Class: 114
       Script: {instanceID: 11468}
     - Class: 115
@@ -236,6 +233,77 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/Lunchroom VS.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9696}
+    - Class: 114
+      Script: {instanceID: 9728}
+    - Class: 114
+      Script: {instanceID: 9864}
+    - Class: 114
+      Script: {instanceID: 9904}
+    - Class: 114
+      Script: {instanceID: 9962}
+    - Class: 114
+      Script: {instanceID: 10312}
+    - Class: 114
+      Script: {instanceID: 10330}
+    - Class: 114
+      Script: {instanceID: 10550}
+    - Class: 114
+      Script: {instanceID: 10666}
+    - Class: 114
+      Script: {instanceID: 10704}
+    - Class: 114
+      Script: {instanceID: 10920}
+    - Class: 114
+      Script: {instanceID: 11196}
+    - Class: 114
+      Script: {instanceID: 11468}
+    - Class: 114
+      Script: {instanceID: 11576}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -282,7 +350,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 02ea7ba379e1880994e218fb8d0751b1
+      Hash: f560e3019367b6ecbaceeb815bdbfa28
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BattleSystem
@@ -516,7 +584,7 @@ ScriptsOnlyBuild:
     className: BattleHUD
   - hash:
       serializedVersion: 2
-      Hash: aa14a33467fa058baa7fe616af1b7b8a
+      Hash: fb2f0e3c41ee63115c6a3c96145fd3a1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogueManager
@@ -546,6 +614,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 5c446c85695ed8d2a7344c8639c78ebe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectLayeringController
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -564,12 +638,6 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TopDownDoorController
-  - hash:
-      serializedVersion: 2
       Hash: 73d18ce267c1e17a3dc2cd5521deb4bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -580,6 +648,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: b93fdbf928779168fc19b3169d8bd75e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndBattle
   - hash:
       serializedVersion: 2
       Hash: 297553743c0af3f293d5509bd75e7d52
@@ -646,12 +720,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GoBackController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -822,7 +890,8 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/BossOffice.unity
-  - Assets/Scenes/Office1.unity
+  - Assets/Scenes/BossOffice VS.unity
+  - Assets/Scenes/Hallway VS.unity
+  - Assets/Scenes/Lunchroom VS.unity
   - Assets/Scenes/Battle.unity
-  playerPath: D:/Capstone/Builds/22 04 3/blackwhitegame.exe
+  playerPath: D:/Capstone/Builds/29 04 3/blackwhitegame.exe

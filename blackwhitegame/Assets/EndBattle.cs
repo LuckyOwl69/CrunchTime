@@ -6,16 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class EndBattle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string previousScene;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
-            SceneManager.LoadScene("Office1");
+            SceneManager.LoadScene(previousScene);
     }
 }

@@ -17,7 +17,9 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     //public GameObject enemyPrefab;
 
-    public Object CurrentFloorScene;
+    //public Object CurrentFloorScene;
+
+    public string hallwayScene;
 
     public Button NAButton;
 
@@ -88,10 +90,12 @@ public class BattleSystem : MonoBehaviour
         enemyUnit = enemyGo.GetComponent<Unit>();
 
         //flavour text as soon as battle begins
-        dialogueText.text = enemyUnit.unitName + " " + enemyUnit.unitJob + "!";
+        //dialogueText.text = enemyUnit.unitName + " " + enemyUnit.unitJob + "!";
+        dialogueText.text = enemyUnit.unitName + " Needs your help with something!";
+
         playerHUD.SetHUD(playerUnit);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
 
         state = BattleState.PLAYERTURN;
         PlayerTurn();
@@ -203,7 +207,8 @@ public class BattleSystem : MonoBehaviour
     {
         if(state == BattleState.WON)
         {
-            SceneManager.LoadScene(CurrentFloorScene.name);
+            //SceneManager.LoadScene(CurrentFloorScene.name);
+            SceneManager.LoadScene(hallwayScene);
 
         }
         else if(state == BattleState.LOST)
@@ -214,7 +219,9 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
-        dialogueText.text = "Your turn: ";
+        //dialogueText.text = "Your turn: ";
+        dialogueText.text = enemyUnit.unitName + " " + enemyUnit.unitJob + "! How will you help?";
+
         //dialogueText.text = enemyUnit.unitName + " Health = " + enemyUnit.currentHP;
         AttackButton.Select();
     }

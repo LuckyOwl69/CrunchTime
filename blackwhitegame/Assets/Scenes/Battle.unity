@@ -5091,7 +5091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5382028291716436763, guid: 56ae1f67a484c8b419d5fa0789c74ad4,
     type: 3}
-  CurrentFloorScene: {fileID: 102900000, guid: 2f0bc61e8144535419d5aa57f58f743c, type: 3}
+  hallwayScene: Hallway VS
   NAButton: {fileID: 921178925}
   AttackButton: {fileID: 363463455}
   Magic1Button: {fileID: 1591885153}
@@ -5470,6 +5470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5a3699149acc141aa20f9428b28815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousScene: Hallway VS
 --- !u!4 &1845170548
 Transform:
   m_ObjectHideFlags: 0

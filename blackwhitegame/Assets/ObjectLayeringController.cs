@@ -8,6 +8,9 @@ public class ObjectLayeringController : MonoBehaviour
     public SpriteRenderer thisSprite;
     public SpriteRenderer playerSprite;
 
+    public float offset;
+    public int layerOffset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +21,13 @@ public class ObjectLayeringController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(thisObjectsParent.transform.position.y <= playerObject.transform.position.y)
+        if (thisObjectsParent.transform.position.y + offset <= playerObject.transform.position.y)
         {
-            thisSprite.sortingOrder = playerSprite.sortingOrder + 1;
+            thisSprite.sortingOrder = playerSprite.sortingOrder + 1 + layerOffset;
         }
-        else if(thisObjectsParent.transform.position.y > playerObject.transform.position.y)
+        else if (thisObjectsParent.transform.position.y + offset > playerObject.transform.position.y) 
         {
-            thisSprite.sortingOrder = playerSprite.sortingOrder - 1;
+            thisSprite.sortingOrder = playerSprite.sortingOrder - 1 + layerOffset;
 
         }
     }
