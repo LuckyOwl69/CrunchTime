@@ -14,9 +14,11 @@ public class DialogueManager : MonoBehaviour
     public Animator dialogueBoxAnimator;
     public Animator npcFaceAnimator;
 
-    public GameObject talkButton;
+    //public GameObject talkButton;
+    //public GameObject talkButton2;
+    public List<GameObject> talkButtons;
 
-    public bool isTalking;
+    bool isTalking;
 
 
     void Start()
@@ -25,9 +27,16 @@ public class DialogueManager : MonoBehaviour
         isTalking = false;
     }
 
+    
+
     public void StartDialogue(Dialogue dialogue)
     {
-        talkButton.gameObject.SetActive(false);
+        foreach (GameObject talkButton in talkButtons)
+        {
+            talkButton.gameObject.SetActive(false);
+        }
+        //talkButton.gameObject.SetActive(false);
+        //talkButton2.gameObject.SetActive(false);
         dialogueBoxAnimator.SetBool("IsOpen", true);
         npcFaceAnimator.SetBool("IsOpen", true);
         isTalking = true;
@@ -77,7 +86,12 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        talkButton.gameObject.SetActive(true);
+        foreach (GameObject talkButton in talkButtons)
+        {
+            //talkButton.gameObject.SetActive(true);
+        }
+        //talkButton.gameObject.SetActive(true);
+        //talkButton2.gameObject.SetActive(true);
         dialogueBoxAnimator.SetBool("IsOpen", false);
         npcFaceAnimator.SetBool("IsOpen", false);
         isTalking = false;

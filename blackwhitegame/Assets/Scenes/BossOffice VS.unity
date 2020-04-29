@@ -698,10 +698,20 @@ PrefabInstance:
       propertyPath: dialogue.name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 571008011406443764, guid: 8ea9aee0c14615e45861c726d3f5dd79,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571008011406443764, guid: 8ea9aee0c14615e45861c726d3f5dd79,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 571008011406443765, guid: 8ea9aee0c14615e45861c726d3f5dd79,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 571008011406443765, guid: 8ea9aee0c14615e45861c726d3f5dd79,
         type: 3}
@@ -1213,6 +1223,11 @@ PrefabInstance:
     - target: {fileID: 1143336247692056404, guid: 096b92d9a07ccd341b9417f59f260425,
         type: 3}
       propertyPath: talkButton
+      value: 
+      objectReference: {fileID: 245362727}
+    - target: {fileID: 1143336247692056404, guid: 096b92d9a07ccd341b9417f59f260425,
+        type: 3}
+      propertyPath: talkButton2
       value: 
       objectReference: {fileID: 245362727}
     - target: {fileID: 1143336247692056405, guid: 096b92d9a07ccd341b9417f59f260425,

@@ -5,14 +5,14 @@ using UnityEngine;
 public class InteractionButtonController : MonoBehaviour
 {
     public GameObject interractionButton;
+    bool inCollider;
 
     private void Start()
     {
         interractionButton.gameObject.SetActive(false);
-
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         interractionButton.gameObject.SetActive(true);
     }

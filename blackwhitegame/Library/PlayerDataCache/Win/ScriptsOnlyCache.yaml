@@ -584,7 +584,7 @@ ScriptsOnlyBuild:
     className: BattleHUD
   - hash:
       serializedVersion: 2
-      Hash: fb2f0e3c41ee63115c6a3c96145fd3a1
+      Hash: aa14a33467fa058baa7fe616af1b7b8a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogueManager
@@ -894,4 +894,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Hallway VS.unity
   - Assets/Scenes/Lunchroom VS.unity
   - Assets/Scenes/Battle.unity
-  playerPath: D:/Capstone/Builds/29 04 3/blackwhitegame.exe
+  playerPath: D:/Capstone/Builds/29 04 05/blackwhitegame.exe

@@ -94,6 +94,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = enemyUnit.unitName + " Needs your help with something!";
 
         playerHUD.SetHUD(playerUnit);
+        playerHUD.SetEnemyHUD(enemyUnit);
 
         yield return new WaitForSeconds(4f);
 
@@ -105,6 +106,8 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack() 
     {
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        playerHUD.SetEnenmyHP(enemyUnit.currentHP);
+
 
         dialogueText.text = "The attack is successful! "+ enemyUnit.unitName+ " takes " + playerUnit.damage + " damage!";
 
@@ -132,6 +135,8 @@ public class BattleSystem : MonoBehaviour
         if(affinity == enemyUnit.weakness)
         {
             bool isDead = enemyUnit.TakeDamage(playerUnit.damage * 2);
+            playerHUD.SetEnenmyHP(enemyUnit.currentHP);
+
             dialogueText.text = "The attack is successful! " + enemyUnit.unitName + " takes " + playerUnit.damage * 2 + " damage!";
 
             yield return new WaitForSeconds(2f);
@@ -153,6 +158,8 @@ public class BattleSystem : MonoBehaviour
         else
         {
             bool isDead = enemyUnit.TakeDamage(playerUnit.damage * 0);
+            playerHUD.SetEnenmyHP(enemyUnit.currentHP);
+
             dialogueText.text = "The attack is unsuccessful... " + enemyUnit.unitName + " takes no damage!";
 
             yield return new WaitForSeconds(2f);
