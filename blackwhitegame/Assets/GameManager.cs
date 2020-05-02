@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public float PlayerHealth;
 
+    bool madeCoffee = false;
 
     void Update()
     {
@@ -34,5 +35,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    void madeCoffeeFunction()
+    {
+        madeCoffee = true;
     }
 }

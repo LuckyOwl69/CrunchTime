@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         isTalking = false;
+        //talkButtons[0].gameObject.SetActive(false);
     }
 
     

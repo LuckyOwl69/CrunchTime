@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: 6946265650198151255}
   - component: {fileID: 3907385567785780226}
   - component: {fileID: 2525645365875098228}
+  - component: {fileID: 1651035588023995271}
   m_Layer: 0
   m_Name: PlayerTopDown
   m_TagString: Untagged
@@ -170,7 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  rb: {fileID: 0}
+  rb: {fileID: 6946265650198151255}
+  animator: {fileID: 1651035588023995271}
   inRoomWithBattles: 0
   distanceTravelled: 0
   playerPositionPrevious: {x: 0, y: 0}
@@ -202,6 +204,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.3}
   m_EdgeRadius: 0
+--- !u!95 &1651035588023995271
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857461862725833120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849b43323d92b8a4e8b165fc365b9456, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7149810316844597228
 GameObject:
   m_ObjectHideFlags: 0
