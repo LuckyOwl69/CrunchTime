@@ -718,6 +718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Talk to Boss 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2473396919851366394, guid: 8ea9aee0c14615e45861c726d3f5dd79,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 576
+      objectReference: {fileID: 0}
     - target: {fileID: 4078737679701630954, guid: 8ea9aee0c14615e45861c726d3f5dd79,
         type: 3}
       propertyPath: m_Sprite
@@ -726,6 +731,10 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4078737679701630954, guid: 8ea9aee0c14615e45861c726d3f5dd79,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1478,6 +1487,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3196843751108140606, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6ea552e8008ad69458996261621be625, type: 2}
     - target: {fileID: 3376182309947038521, guid: 9f710a47254957c49b78ae32c3c073d8,
         type: 3}
       propertyPath: m_Name
@@ -1593,6 +1607,12 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6605596272201584841, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7354221817209405713, guid: 88f034a4c11953b4894685d31b719cdc,
+        type: 3}
     - target: {fileID: 6609503828299705426, guid: 9f710a47254957c49b78ae32c3c073d8,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1607,6 +1627,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Face
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149810316844597228, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363833739994776466, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7662209542853007834, guid: 9f710a47254957c49b78ae32c3c073d8,
         type: 3}

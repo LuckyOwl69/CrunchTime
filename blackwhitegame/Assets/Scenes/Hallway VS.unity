@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.51
+      value: 8.535
       objectReference: {fileID: 0}
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
@@ -354,7 +354,17 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7124996
+      value: 3.985499
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a40e577938d1754ea4b2f2360fbc6d9, type: 3}
@@ -636,7 +646,7 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.06
+      value: 10.8297
       objectReference: {fileID: 0}
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
@@ -691,7 +701,7 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7124996
+      value: 0.85568243
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a40e577938d1754ea4b2f2360fbc6d9, type: 3}
@@ -843,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4c3a15497f0fc44874ba40a1f04139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: BossOffice VS
+  NextScene: BossOffice 2 VS
   GameManagerObject: {fileID: 593999979}
   NextScenePositionX: 18
   NextScenePositionY: 10
@@ -862,12 +872,12 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.27
+      value: 13.213
       objectReference: {fileID: 0}
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.51
+      value: 8.506
       objectReference: {fileID: 0}
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
@@ -917,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7124996
+      value: 3.9923956
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a40e577938d1754ea4b2f2360fbc6d9, type: 3}
@@ -1022,7 +1032,7 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.06
+      value: 10.852
       objectReference: {fileID: 0}
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
@@ -1077,7 +1087,7 @@ PrefabInstance:
     - target: {fileID: 8512482104057270939, guid: 4a40e577938d1754ea4b2f2360fbc6d9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7124996
+      value: 0.85331416
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a40e577938d1754ea4b2f2360fbc6d9, type: 3}

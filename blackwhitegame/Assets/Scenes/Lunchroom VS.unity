@@ -822,7 +822,7 @@ PrefabInstance:
     - target: {fileID: 8922228194459983666, guid: f52551a097d6f1c488b9fd61c9747f39,
         type: 3}
       propertyPath: layerOffset
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8922228194459983679, guid: f52551a097d6f1c488b9fd61c9747f39,
         type: 3}
@@ -1676,6 +1676,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3196843751108140606, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2efdc66ef1345fa478f4d1ac21e42ef0, type: 2}
     - target: {fileID: 3376182309947038521, guid: 9f710a47254957c49b78ae32c3c073d8,
         type: 3}
       propertyPath: m_Name
@@ -1771,6 +1776,12 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6605596272201584841, guid: 9f710a47254957c49b78ae32c3c073d8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7354221817209405713, guid: 88f034a4c11953b4894685d31b719cdc,
+        type: 3}
     - target: {fileID: 6609503828299705426, guid: 9f710a47254957c49b78ae32c3c073d8,
         type: 3}
       propertyPath: m_SortingLayerID
