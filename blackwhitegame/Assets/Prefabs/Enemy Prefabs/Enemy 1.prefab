@@ -48,8 +48,8 @@ MonoBehaviour:
   unitJob: 'wants to bound a book '
   unitLevel: 1
   damage: 5
-  maxHP: 30
-  currentHP: 30
+  maxHP: 60
+  currentHP: 60
   weakness: Stapler
 --- !u!1 &8507880140909726241
 GameObject:

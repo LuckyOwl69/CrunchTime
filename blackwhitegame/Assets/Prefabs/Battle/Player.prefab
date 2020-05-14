@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Sunny
+  unitJob: 
   unitLevel: 1
   damage: 10
-  maxHP: 25
-  currentHP: 20
+  maxHP: 50
+  currentHP: 50
+  weakness: 

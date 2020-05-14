@@ -11,6 +11,14 @@ public class GenericDoorController : MonoBehaviour
 
     public float NextScenePositionX;
     public float NextScenePositionY;
+
+    int currentStoryState;
+
+    void Update()
+    {
+        currentStoryState = GameManager.storyState;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -20,6 +28,8 @@ public class GenericDoorController : MonoBehaviour
 
             GameManager.overworldPos.x = NextScenePositionX;
             GameManager.overworldPos.y = NextScenePositionY;
+
+            GameManager.storyState = currentStoryState;
         }
     }
 }

@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Conference Room VS.unity
     guid: 280e9e7cba522ef45add7c179d59b4d4
+  - enabled: 1
+    path: Assets/Scenes/BossOffice 2 VS.unity
+    guid: 37d900dd7b32f414695f3b96a0872fdb
+  - enabled: 1
+    path: Assets/Scenes/Hallway VS 1.unity
+    guid: 38efcfefd30de3846b7d47e2c54a7a83
   m_configObjects: {}
